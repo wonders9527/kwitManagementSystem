@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd
+    http://www.springframework.org/schema/cache 
+    http://www.springframework.org/schema/cache/spring-cache-4.3.xsd">
+	
+	<!-- 测试实例化date -->
+	<bean id="date" class="java.util.Date"/>
+	
+	<!-- 开启注解扫描 -->
+	<context:component-scan base-package="com.kwit.."/>
+	
+	<!-- 所有的Properties文件应该交给Spring管理,而且在启动的时候加载Spring支持两种方式, property-placeholder 仅仅在XML中使用-->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	  <property name="locations">
+	  	<array>
+	  		<value>classpath:conn.properties</value>
+	  	</array>
+	  </property>
+	</bean>
+
+	<!-- 配置数据源 -->
+	 <bean id="dataSourceKwit" class="${kwit.dataSource}">
+	 	<property name="driverClass" value="${kwit.driverClass}" />
+	 	<property name="jdbcUrl" value="${kwit.jdbcUrl}" />
+	 	<property name="user" value="${kwit.user}" />
+	 	<property name="password" value="${kwit.password}" />
+	 </bean>
+	
+	<!-- 采用LocalSessionFactoryBean 取代 HibernateTemplate(有侵入性) -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" >
+		<property name="dataSource" ref="dataSourceKwit" ></property>
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+	</bean>
+	
+	<!-- 配置事务管理器, 管理sessionFactory -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 配置active(通知) ,指定了哪些方法需要什么类型的实务模式 -->
+	<tx:advice id="advice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="sava" propagation="REQUIRED"/>
+			<tx:method name="update" propagation="REQUIRED"/>
+			<tx:method name="delete" propagation="REQUIRED"/>
+			<tx:method name="*" propagation="SUPPORTS"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 配置AOP的切面表达式 -->
+	<aop:config>
+		<!-- 配置那些包的类要切入事务 -->
+		<aop:pointcut expression="execution(* com.kwit.service.impl.*.*(..))" id="pointcut"/>
+		<!-- 通知 + 切面表达式,才是完整的切入路径 -->
+		<aop:advisor advice-ref="advice" pointcut-ref="pointcut"/>
+	</aop:config>
+
+</beans>
+

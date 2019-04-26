@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html lang="en">
+  
+  <!--
+<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>供应商管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="../Public/icomoon/style.css" rel="stylesheet">
+
+    <link href="../Public/css/main.css" rel="stylesheet">
+    <link href="../Public/css/fonts/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="../Public/img/logo.png" alt="logo" />
+      </a>
+      <div class="btn-group">
+        <button class="btn btn-primary">Srinu Baswa</button>
+        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li><a href="#">Edit Profile</a></li>
+          <li><a href="#">Account Settings</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <ul class="mini-nav">
+        <li>
+          <a href="#">
+            <div class="fs1" aria-hidden="true" data-icon="&#xe040;"></div>
+            <span class="info-label badge badge-warning">3</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="fs1" aria-hidden="true" data-icon="&#xe04c;"></div>
+            <span class="info-label badge badge-info">5</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="fs1" aria-hidden="true" data-icon="&#xe037;"></div>
+            <span class="info-label badge badge-success">9</span>
+          </a>
+        </li>
+      </ul>
+      
+    </header>
+    <div class="container-fluid">
+      <div class="dashboard-container">
+        <div class="top-nav">
+          <ul>
+            <li>
+              <a href="index.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a0;"></div>门店管理</a>
+            </li>
+            <li>
+              <a href="product.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></div>商品管理</a>
+            </li>
+            <li>
+              <a href="consumption.html"><div class="fs1" aria-hidden="true" data-icon="&#xe096;"></div>消费充值</a>
+            </li>
+            <li>
+              <a href="m_member.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></div>会员管理</a>
+            </li>
+            <li>
+              <a href="stock.html" class="selected" style="font-size: 16px;"><div class="fs1" aria-hidden="true" data-icon="&#xe0a9;"></div>库存管理</a>
+            </li>
+            <li>
+              <a href="staff_manage.html"><div class="fs1" aria-hidden="true" data-icon="&#xe14a;"></div>员工管理</a>
+            </li>
+            <li>
+              <a href="media.html"><div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>排班考勤</a>
+            </li>
+            <li>
+              <a href="calendar.html"><div class="fs1" aria-hidden="true" data-icon="&#xe052;"></div>报表管理</a>
+            </li>
+            <li>
+              <a href="typography.html"><div class="fs1" aria-hidden="true" data-icon="&#xe100;"></div>营销管理</a>
+            </li>
+            <li>
+              <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>配置管理</a>
+            </li>
+            <li>
+              <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>系统管理</a>
+            </li>
+          </ul>
+          <div class="clearfix">
+          </div>
+        </div>
+        <div class="sub-nav">
+          <ul>
+            <li><a href="stock.html">主页</a></li>
+            <li><a href="s_stockManage.html">库存管理</a></li>
+            <li><a href="s_purchaseManage.html">采购管理</a></li>
+            <li><a href="s_returnManage.html">退货管理</a></li>
+            <li><a href="s_supplierManage.html" class="heading">供应商管理</a></li>
+          </ul>
+        </div>
+        <div class="dashboard-wrapper">
+          <div class="left-sidebar">
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="widget">
+                  <div class="widget-body">
+                    <div class="row-fluid">
+                      <div class="metro-nav">
+                        <div class="control-supplier">
+                          <a class="btn btn-info bottom-margin" href="#" id="prompt">新增供应商</a>
+                        </div>
+                        <div class="control-group control-supplier">
+                          <div class="controls">
+                            <select class="span2">
+                              <option value="supplierName">供应商名称</option>
+                              <option value="supplierContactNamber">手机号</option>
+                              <option value="supplierContactName">联系人</option>
+                            </select>
+                            <input id="query" type="text" class="span3"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-header">
+                    <div class="title">库存列表</div>
+                    <span class="tools"><a class="fs1" aria-hidden="true" data-icon="&#xe090;"></a></span>
+                  </div>
+                  <div class="widget-body">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.fluid-container-->
+    </div>
+
+    <div class="modal fade" id="supplierModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="supplierModalTitle">新增供应商</h4>
+          </div>
+          <div class="modal-body">
+            <div class="widget-body">
+              <div class="row-fluid">
+                <div class="metro-nav">
+                  <div class="control-group">
+                    <label class="control-label" for="supplierName">供应商名称</label>
+                    <div class="controls">
+                      <input type="hidden" id="supplierId">
+                      <input type="text" id="supplierName" class="span10" placeholder="供应商名称"  />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="supplierCode">供应商代码</label>
+                    <div class="controls">
+                      <input type="text" id="supplierCode" class="span10" placeholder="供应商代码"  />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="supplierContactName">联系人</label>
+                    <div class="controls">
+                      <input type="text" id="supplierContactName" class="span10" placeholder="联系人"  />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="supplierContactNamber">联系电话</label>
+                    <div class="controls">
+                      <input type="text" id="supplierContactNamber" class="span10" placeholder="联系电话"  />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="remark">备注</label>
+                    <div class="controls">
+                      <textarea rows="5" id="remark" class="span10 input-block-level" placeholder="备注"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button id="addSupplierManage" type="button" class="btn btn-primary">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Info_prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">提示</h4>
+          </div>
+          <div id="promptContent" class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../Public/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../Public/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../Public/js/professional/p_supplierManage.js"></script>
+    
+    
+  
+</body>
+</html>

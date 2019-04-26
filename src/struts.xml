@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+       "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/> 	
+	
+	<package name="kwitManagementSystem"  extends="json-default">
+	
+		<global-results>
+			<result name="login" type="redirect">/login.html</result>
+		</global-results>
+		
+	    <action name="dataClassifiedInformation_*" class="dataClassifiedInformationAction" method="{1}">
+			<result name="save" type="json" />
+			<result name="update" type="json" />
+			<result name="delete" type="json" />
+			<result name="jsonList" type="json">
+			   <param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<allowed-methods>getProductClassified,addProductClassified,updateProductClassified,deleteProductClassified</allowed-methods>
+		</action>
+		
+		<action name="dataDepartmentInformation_*" class="dataDepartmentInformationAction" method="{1}">
+			<result name="save" type="json" />
+			<result name="update" type="json" />
+			<result name="delete" type="json" />
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<allowed-methods>addDepartment,updateDepartment,deleteDepartment,getDepartment</allowed-methods>
+		</action>
+		
+		<action name="dataProductInformation_*" class="dataProductInformationAction" method="{1}">
+			<result name="save" type="json" />
+			<result name="update" type="json" />
+			<result name="delete" type="json" />
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<allowed-methods>saveProductInfor,getProductInfor,getProductInforById,deleteProductInfor,updateProductInfor,uploadPicture,getProductInforLimt</allowed-methods>
+		</action>
+		
+		<action name="dataMemberGrade_*" class="dataMemberGradeAction" method="{1}">
+			<result name="save" type="json" />
+			<result name="update" type="json" />
+			<result name="delete" type="json" />
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<allowed-methods>getMemberGrade,addMemberGrade,updateMemberGrade,deleteMemberGrade</allowed-methods>
+		</action>
+		
+		<action name="dataMemberInformation_*" class="dataMemberInformationAction" method="{1}">
+			<result name="save" type="json" />
+			<result name="update" type="json" />
+			<result name="delete" type="json" />
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<allowed-methods>uploadPicture,getMemberInformation,addMemberInformation,updateMemberInformation,deleteMemberInformation,getMemberInformationByPhone</allowed-methods>
+		</action>
+		
+		<action name="recordMemberRecharge_*" class="recordMemberRechargeAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>getRecordMemberRecharge,addRecordMemberRecharge,updateRecordMemberRecharge,deleteRecordMemberRecharge</allowed-methods>
+		</action>
+		
+		<action name="dataRechargeInformation_*" class="dataRechargeInformationAction" method="{1}">
+			<result name="save" type="json" />
+			<result name="update" type="json" />
+			<result name="delete" type="json" />
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<allowed-methods>getRecharge,saveRecharge,updateRecharge,deleteRecharge,uploadPicture</allowed-methods>
+		</action>
+		
+		<action name="dataStockProduct_*" class="dataStockProductAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+            <allowed-methods>saveDataStockProduct,getDataStockProduct,updateDataStockProduct,deleteDataStockProduct</allowed-methods>
+		</action>
+		
+		<action name="dataSupplierInformation_*" class="dataSupplierInformationAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+            <allowed-methods>getSupplierInfor,addSupplierInfor,updateSupplierInfor,deleteSupplierInfor</allowed-methods>
+		</action>
+		
+		<action name="frequencyInformation_*" class="frequencyInformationAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>addFrequencyInformation,getFrequencyInformation,deleteFrequencyInformation,updateFrequencyInformation</allowed-methods>
+		</action>
+		
+		<action name="recordConsumption_*" class="recordConsumptionAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>saveRecordConsumption,getRecordConsumption,updateRecordConsumption,deleteRecordConsumption</allowed-methods>
+		</action>
+		
+		<action name="recordExpenditure_*" class="recordExpenditureAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>getRecordExpenditure,addRecordExpenditure,updateRecordExpenditure,deleteRecordExpenditure</allowed-methods>
+		</action>
+		
+		<action name="recordPurchase_*" class="recordPurchaseAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>getPurchase,addPurchase,updatePurchase,deletePurchase</allowed-methods>
+		</action>
+		
+		<action name="dataEmployeePosition_*" class="dataEmployeePositionAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>getEmployeePosition,addEmployeePosition,updateEmployeePosition,deleteEmployeePosition</allowed-methods>
+		</action>
+		
+		<action name="dataEmployeeInformation_*" class="dataEmployeeInformationAction" method="{1}">
+			<result name="save" type="json"/>
+			<result name="update" type="json"/>
+			<result name="delete" type="json"/>
+			<result type="json">
+            	<param name="root">result</param>
+            </result>
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<allowed-methods>uploadPicture,addEmployeeInformation,updateEmployeeInformation,deleteEmployeeInformation,getEmployeeInformation,getEmployeeInformationById</allowed-methods>
+		</action>
+		
+		<!-- 用来完成系统请求转发的action,所有的请求都交给 execute -->
+		<action name="send_*_*" class="sendAction">
+			<result name="send">/WEB-INF/{1}/{2}.jsp</result>
+		</action>
+	 
+	 	<action name="user_*" class="userAction" method="{1}">
+			<result name="jsonList" type="json">
+				<param name="root">jsonList</param>
+			</result>
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+            <allowed-methods>login</allowed-methods>
+		</action>
+		
+	</package>
+</struts>    

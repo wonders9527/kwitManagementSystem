@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html lang="en">
+
+<!--
+<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>新增商品</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="../Public/icomoon/style.css" rel="stylesheet">
+  <!--[if lte IE 7]>
+  <script src="css/icomoon-font/lte-ie7.js">
+  </script>
+  <![endif]-->
+  <link href="../Public/css/main.css" rel="stylesheet">
+  <link href="../Public/css/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="#" class="logo">
+    <img src="../Public/img/logo.png" alt="logo" />
+  </a>
+  <div class="btn-group">
+    <button class="btn btn-primary">Srinu Baswa</button>
+    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu pull-right">
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#">Account Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+  <ul class="mini-nav">
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe040;"></div>
+        <span class="info-label badge badge-warning">3</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe04c;"></div>
+        <span class="info-label badge badge-info">5</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe037;"></div>
+        <span class="info-label badge badge-success">9</span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+<div class="container-fluid">
+  <div class="dashboard-container">
+    <div class="top-nav">
+      <ul>
+        <li>
+          <a href="index.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a0;"></div>门店管理</a>
+        </li>
+        <li>
+          <a href="product.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></div>商品管理</a>
+        </li>
+        <li>
+          <a href="consumption.html"><div class="fs1" aria-hidden="true" data-icon="&#xe096;"></div>消费充值</a>
+        </li>
+        <li>
+          <a href="m_member.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></div>会员管理</a>
+        </li>
+        <li>
+          <a href="stock.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a9;"></div>库存管理</a>
+        </li>
+        <li>
+          <a href="staff_manage.html" class="selected" style="font-size: 16px;"><div class="fs1" aria-hidden="true" data-icon="&#xe14a;"></div>员工管理</a>
+        </li>
+        <li>
+          <a href="media.html"><div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>排班考勤</a>
+        </li>
+        <li>
+          <a href="calendar.html"><div class="fs1" aria-hidden="true" data-icon="&#xe052;"></div>报表管理</a>
+        </li>
+        <li>
+          <a href="typography.html"><div class="fs1" aria-hidden="true" data-icon="&#xe100;"></div>营销管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>配置管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>系统管理</a>
+        </li>
+      </ul>
+      <div class="clearfix">
+      </div>
+    </div>
+
+    <div class="sub-nav">
+      <ul>
+        <li><a href="staff_manage.html">主页</a></li>
+        <li><a href="staff_post.html">员工岗位</a></li>
+        <li><a href="staff_add.html" class="heading">新增员工</a></li>
+        <li><a href="staff_list.html">员工列表</a></li>
+      </ul>
+    </div>
+
+    <div class="dashboard-wrapper">
+      <div class="left-sidebar">
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="widget">
+              <div class="widget-header">
+                <div class="title">新增员工</div>
+                <span class="tools">
+                  <a class="fs1" aria-hidden="true" data-icon="&#xe090;"></a>
+                </span>
+              </div>
+              <div class="widget-body">
+                <div class="row-fluid">
+                  <div class="metro-nav">
+                    <form class="form-horizontal">
+                      <div class="control-group">
+                        <label class="control-label" for="employeeName">员工姓名</label>
+                        <div class="controls">
+                          <input id="employeeName" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="gender">性别</label>
+                        <div id="gender" class="controls">
+                          <label for="man" class="radio"><i class="fa fa-dot-circle-o" style="font-size:22px;display:inline;"></i>男</label>
+                          <label for="woman" class="radio"><i class="fa fa-circle-o" style="font-size:22px;display:inline;"></i>女</label>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="contactNumber">联系电话</label>
+                        <div class="controls">
+                          <input id="contactNumber" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="appellation">称谓</label>
+                        <div class="controls">
+                          <input id="appellation" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="idNumber">身份证号</label>
+                        <div class="controls">
+                          <input id="idNumber" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="dateBirth">出生日期</label>
+                        <div class="controls">
+                          <input id="dateBirth" type="date" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="height">身高</label>
+                        <div class="controls">
+                          <input id="height" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="politicalStatus">政治面貌</label>
+                        <div class="controls">
+                          <select id="politicalStatus" class="span12">
+                            <option value='0'>群众</option>
+                            <option value='1'>团员</option>
+                            <option value='2'>党员</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="employmentStatus">是否在职</label>
+                        <div class="controls">
+                          <select id="employmentStatus" class="span12">
+                            <option value='0'>在职</option>
+                            <option value='1'>待岗</option>
+                            <option value='2'>离职</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="marriageStatus">婚姻状况</label>
+                        <div id="marriageStatus" class="controls">
+                          <label for="unmarried" class="radio"><i class="fa fa-dot-circle-o" style="font-size:22px;display:inline;"></i>未婚</label>
+                          <label for="married" class="radio"><i class="fa fa-circle-o" style="font-size:22px;display:inline;"></i>已婚</label>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="birthplace">籍贯</label>
+                        <div class="controls">
+                          <input id="birthplace" type="text" class="span12"/>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="form-horizontal">
+                      <div class="control-group">
+                        <label class="control-label" for="employeePicture">员工照片</label>
+                        <div class="controls">
+                          <ul class="imglist">
+                            <li>
+                              <a href="#" onclick="uploadImg(event)">
+                                <img id="employeePicture" name="" src="../Public/img/upload.JPG"/>
+                                <input name="imgInput" type="file">
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="homeAddress">家庭住址</label>
+                        <div class="controls">
+                          <input id="homeAddress" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="department">所属部门</label>
+                        <div class="controls">
+                          <input id="department" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="post">所属岗位</label>
+                        <div class="controls">
+                          <input id="post" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="healthStatus">健康状况</label>
+                        <div id="healthStatus" class="controls">
+                          <label for="health" class="radio"><i class="fa fa-dot-circle-o" style="font-size:22px;display:inline;"></i>健康</label>
+                          <label for="unhealthy" class="radio"><i class="fa fa-circle-o" style="font-size:22px;display:inline;"></i>非健康</label>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="education">学历</label>
+                        <div class="controls">
+                          <select id="education" class="span12">
+                            <option value='0'>博士</option>
+                            <option value='1'>硕士</option>
+                            <option value='2'>本科</option>
+                            <option value='3'>专科</option>
+                            <option value='4'>高中</option>
+                            <option value='5'>中专</option>
+                            <option value='6'>初中</option>
+                            <option value='7'>小学</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="graduatedTime">毕业时间</label>
+                        <div class="controls">
+                          <input id="graduatedTime" type="date" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="profession">所学专业</label>
+                        <div class="controls">
+                          <input id="profession" type="text" class="span12"/>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="graduatedSchool">毕业学校</label>
+                        <div class="controls">
+                          <input id="graduatedSchool" type="text" class="span12"/>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="control-group">
+                      <label class="control-label" style="margin-left: 80px;" for="employeeIntroduction">员工简介</label>
+                      <div class="controls">
+                        <textarea id="employeeIntroduction" rows="5" style="margin-left: 80px;" class="span11 input-block-level" placeholder="商品简介"></textarea>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" style="margin-left: 80px;" for="remark">备注</label>
+                      <div class="controls">
+                        <textarea id="remark" rows="5" style="margin-left: 80px;" class="span11 input-block-level" placeholder="商品简介"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-actions no-margin">
+                      <button id="addStaff" type="button" class="btn btn-info pull-right">确认</button>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Info_prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">提示</h4>
+      </div>
+      <div id="promptContent" class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../Public/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../Public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../Public/js/professional/staff_add.js"></script>
+
+</body>
+</html>

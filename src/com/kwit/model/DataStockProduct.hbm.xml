@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <class name="com.kwit.model.DataStockProduct" table="data_stock_product" catalog="kwitmanagementsystem">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="socialCreditCode" type="java.lang.String">
+            <column name="social_credit_code" length="18" not-null="true">
+                <comment>统一社会信息代码</comment>
+            </column>
+        </property>
+        <property name="storeName" type="java.lang.String">
+            <column name="store_name" length="50" not-null="true">
+                <comment>门店名称</comment>
+            </column>
+        </property>
+        <property name="commodityClassification" type="java.lang.String">
+            <column name="commodity_classification" length="30" not-null="true">
+                <comment>商品类别</comment>
+            </column>
+        </property>
+        <property name="commodityName" type="java.lang.String">
+            <column name="commodity_name" length="30" not-null="true">
+                <comment>商品名称</comment>
+            </column>
+        </property>
+        <property name="commoditySpecification" type="java.lang.String">
+            <column name="commodity_specification" length="10">
+                <comment>规格</comment>
+            </column>
+        </property>
+        <property name="unit" type="java.lang.String">
+            <column name="unit" length="10">
+                <comment>单位</comment>
+            </column>
+        </property>
+        <property name="stockQuantity" type="java.lang.String">
+            <column name="stock_quantity" length="10">
+                <comment>库存数量</comment>
+            </column>
+        </property>
+        <property name="storageTime" type="java.sql.Timestamp">
+            <column name="storage_time" length="19">
+                <comment>入库时间</comment>
+            </column>
+        </property>
+        <property name="countingTime" type="java.sql.Timestamp">
+            <column name="counting_time" length="19">
+                <comment>盘点时间</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="100">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="create_date" length="19" not-null="true">
+                <comment>数据创建时间</comment>
+            </column>
+        </property>
+        <property name="temp1" type="java.lang.String">
+            <column name="Temp1" length="100">
+                <comment>预留一</comment>
+            </column>
+        </property>
+        <property name="temp2" type="java.lang.String">
+            <column name="Temp2" length="100">
+                <comment>预留二</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

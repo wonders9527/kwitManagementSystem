@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html lang="en">
+  
+  <!--
+<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>新增会员</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+
+    <link href="../Public/icomoon/style.css" rel="stylesheet">
+    <!--[if lte IE 7]>
+    <script src="../Public/css/icomoon-font/lte-ie7.js">
+    </script>
+    <![endif]-->
+
+    <link href="../Public/css/main.css" rel="stylesheet">
+    <link href="../Public/css/fonts/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="../Public/img/logo.png" alt="Logo" />
+      </a>
+      <div class="btn-group">
+        <button class="btn btn-primary">
+          Srinu Baswa
+        </button>
+        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+          <span class="caret">
+          </span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li>
+            <a href="#">
+              Edit Profile
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Account Settings
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="mini-nav">
+        <li>
+          <a href="#">
+            <div class="fs1" aria-hidden="true" data-icon="&#xe040;"></div>
+            <span class="info-label badge badge-warning">
+              3
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="fs1" aria-hidden="true" data-icon="&#xe04c;"></div>
+            <span class="info-label badge badge-info">
+              5
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="fs1" aria-hidden="true" data-icon="&#xe037;"></div>
+            <span class="info-label badge badge-success">
+              9
+            </span>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div class="container-fluid">
+      <div class="dashboard-container">
+        <div class="top-nav">
+          <ul>
+            <li>
+              <a href="index.html" style="font-size: 16px;"><div class="fs1" aria-hidden="true" data-icon="&#xe0a0;"></div>门店管理</a>
+            </li>
+            <li>
+              <a href="product.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></div>商品管理</a>
+            </li>
+            <li>
+              <a href="consumption.html"><div class="fs1" aria-hidden="true" data-icon="&#xe096;"></div>消费充值</a>
+            </li>
+            <li>
+              <a href="m_member.html" class="selected"><div class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></div>会员管理</a>
+            </li>
+            <li>
+              <a href="stock.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a9;"></div>库存管理</a>
+            </li>
+            <li>
+              <a href="staff_manage.html"><div class="fs1" aria-hidden="true" data-icon="&#xe14a;"></div>员工管理</a>
+            </li>
+            <li>
+              <a href="media.html"><div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>排班考勤</a>
+            </li>
+            <li>
+              <a href="calendar.html"><div class="fs1" aria-hidden="true" data-icon="&#xe052;"></div>报表管理</a>
+            </li>
+            <li>
+              <a href="typography.html"><div class="fs1" aria-hidden="true" data-icon="&#xe100;"></div>营销管理</a>
+            </li>
+            <li>
+              <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>配置管理</a>
+            </li>
+            <li>
+              <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>系统管理</a>
+            </li>
+          </ul>
+          <div class="clearfix">
+          </div>
+        </div>
+        <div class="sub-nav">
+          <ul>
+            <li><a href="m_member.html">主页</a></li>
+            <li><a href="m_addMember.html" class="heading">新增会员</a></li>
+            <li><a href="m_listMember.html">会员列表</a></li>
+            <li><a href="m_memberGrade.html">会员等级</a></li>
+          </ul>
+        </div>
+
+        <div class="dashboard-wrapper">
+          <div class="left-sidebar">
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="widget no-margin">
+                  <div class="widget-header">
+                    <div class="title">新增会员</div>
+                    <span class="tools">
+                      <a class="fs1" aria-hidden="true" data-icon="&#xe090;"></a>
+                    </span>
+                  </div>
+                  <div class="widget-body">
+                    <div class="container-fluid">
+                      <div class="row-fluid">
+                        <div class="span3">
+                          <div class="thumbnail">
+                            <img id="memberAvatar" style="width: 100%;height: 100%;" src="../Public/img/upload.JPG"/>
+                            <input style="display: none;" id="imgInput" type="file"/>
+                          </div>
+                        </div>
+                        <div class="span9">
+                          <form class="form-horizontal">
+                            <h5>个人基本信息</h5>
+                            <hr>
+                            <div class="control-group">
+                              <label class="control-label">会员姓名</label>
+                              <div class="controls">
+                                <input id="memberName" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">联系电话</label>
+                              <div class="controls">
+                                <input id="memberPhone" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label" for="memberSex">性别</label>
+                              <div id="memberSex" class="controls">
+                                <label for="man" class="radio"><i class="fa fa-dot-circle-o" style="font-size:22px;display:inline;"></i>男</label>
+                                <label for="woman" class="radio"><i class="fa fa-circle-o" style="font-size:22px;display:inline;"></i>女</label>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">出生日期</label>
+                              <div class="controls">
+                                <input id="memberDateBirth" type="date" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">身份证号</label>
+                              <div class="controls">
+                                <input id="memberIdnumber" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">会员单位</label>
+                              <div class="controls">
+                                <input id="memberOrganization" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">会员地址</label>
+                              <div class="controls">
+                                <input id="memberAddress" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <br/>
+                            <h5>会员信息</h5>
+                            <hr>
+                            <div class="control-group">
+                              <label class="control-label">会员密码</label>
+                              <div class="controls">
+                                <input id="memberPassword" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">会员等级</label>
+                              <div class="controls">
+                                <select id="memberGrade" class="span12">
+                                </select>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">优惠金</label>
+                              <div class="controls">
+                                <input type="text" class="span12" id="favorableAmount"  onkeyup="this.value=this.value.replace(/[^\d\.\d{0,2}]/g,'')">
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">会员积分</label>
+                              <div class="controls">
+                                <input id="memberIntegral" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label">备注</label>
+                              <div class="controls">
+                                <input id="remark" type="text" class="span12"/>
+                              </div>
+                            </div>
+                            <div>
+                              <button id="addMember" type="button" class="btn btn-info">保存</button>
+                              <button id="cancel" type="button" class="btn">取消</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="Info_prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+            <div id="promptContent" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="btnClose" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="../Public/js/jquery-2.1.4.min.js"></script>
+      <script type="text/javascript" src="../Public/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../Public/js/professional/m_addMember.js"></script>
+  
+</body>
+</html>

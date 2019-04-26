@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="myeclipse.connection.profile">MySql5.5</property>
+		<property name="show_sql">true</property>
+		<property name="current_session_context_class">thread</property>  
+		<!--  <property name="current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext</property>   -->
+		<!--  关闭 bean validate验证模式   -->
+		<property name="javax.persistence.validation.mode">none</property>
+		<!-- 如果使用连接池的方式的话,使Hibernate默认不使用单纯的JDBC连接 -->
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+		
+		<mapping resource="com/kwit/model/DataRechargeInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/DataProductInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/DataDepartmentInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/DataClassifiedInformation.hbm.xml"/>
+		
+		<mapping resource="com/kwit/model/DataMemberGrade.hbm.xml"/>
+		<mapping resource="com/kwit/model/DataMemberInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/RecordMemberRecharge.hbm.xml"/>
+		
+		<mapping resource="com/kwit/model/DataSupplierInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/DataEmployeePosition.hbm.xml"/>
+		<mapping resource="com/kwit/model/DataEmployeeInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/FrequencyInformation.hbm.xml"/>
+		<mapping resource="com/kwit/model/RecordExpenditure.hbm.xml"/>
+		<mapping resource="com/kwit/model/RecordConsumption.hbm.xml"/>
+		<mapping resource="com/kwit/model/RecordProductConsumption.hbm.xml"/>
+		<mapping resource="com/kwit/model/RecordPurchase.hbm.xml"/>
+		<mapping resource="com/kwit/model/UserTable.hbm.xml"/>
+	</session-factory>
+	
+</hibernate-configuration>

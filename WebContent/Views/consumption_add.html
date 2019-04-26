@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html lang="en">
+
+<!--
+<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>新增消费</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link href="../Public/icomoon/style.css" rel="stylesheet">
+  <!--[if lte IE 7]>
+  <script src="css/icomoon-font/lte-ie7.js"></script>
+  <![endif]-->
+
+  <link href="../Public/css/main.css" rel="stylesheet">
+  <link href="../Public/css/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="#" class="logo">
+    <img src="../Public/img/logo.png" alt="logo" />
+  </a>
+  <div class="btn-group">
+    <button class="btn btn-primary">Srinu Baswa</button>
+    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu pull-right">
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#">Account Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+  <ul class="mini-nav">
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe040;"></div>
+        <span class="info-label badge badge-warning">3</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe04c;"></div>
+        <span class="info-label badge badge-info">5</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe037;"></div>
+        <span class="info-label badge badge-success">9</span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+<div class="container-fluid">
+  <div class="dashboard-container">
+    <div class="top-nav">
+      <ul>
+        <li>
+          <a href="index.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a0;"></div>门店管理</a>
+        </li>
+        <li>
+          <a href="product.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></div>商品管理</a>
+        </li>
+        <li>
+          <a href="consumption.html" class="selected" style="font-size: 16px;"><div class="fs1" aria-hidden="true" data-icon="&#xe096;"></div>消费充值</a>
+        </li>
+        <li>
+          <a href="m_member.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></div>会员管理</a>
+        </li>
+        <li>
+          <a href="stock.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a9;"></div>库存管理</a>
+        </li>
+        <li>
+          <a href="staff_manage.html"><div class="fs1" aria-hidden="true" data-icon="&#xe14a;"></div>员工管理</a>
+        </li>
+        <li>
+          <a href="media.html"><div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>排班考勤</a>
+        </li>
+        <li>
+          <a href="calendar.html"><div class="fs1" aria-hidden="true" data-icon="&#xe052;"></div>报表管理</a>
+        </li>
+        <li>
+          <a href="typography.html"><div class="fs1" aria-hidden="true" data-icon="&#xe100;"></div>营销管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>配置管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>系统管理</a>
+        </li>
+      </ul>
+      <div class="clearfix">
+      </div>
+    </div>
+    <div class="sub-nav">
+      <ul>
+        <li><a href="consumption.html">主页</a></li>
+        <li><a href="consumption_add.html" class="heading">新增消费</a></li>
+        <li><a href="consumption_list.html">消费列表</a></li>
+        <li><a href="h_rechargeList.html">新增充值</a></li>
+        <li><a href="h_department.html">充值列表</a></li>
+        <li><a href="h_recordExpenditure.html">充值设置</a></li>
+      </ul>
+    </div>
+
+    <div class="dashboard-wrapper">
+      <div class="left-sidebar">
+        <div class="row-fluid">
+          <div class="span5">
+            <div data-spy="scroll" data-offset="0" class="leftContent">
+              <table id="consumptionList" class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th style="display:none;">id</th>
+                    <th style="width:30%">商品名称</th>
+                    <th style="width:20%">单价</th>
+                    <th style="width:20%">数量</th>
+                    <th style="width:20%">小计</th>
+                    <th style="width:10%">操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="footer">
+
+              <div class="leftFooter">
+                <div class="controls">
+                  <label class="control-label" for="customerName">客户姓名</label>
+                  <input type="text" id="customerName" class="span4"/>
+                  <label class="control-label" for="customerPhone">联系电话</label>
+                  <input type="text" id="customerPhone" class="span5"/>
+                </div>
+                <div class="controls" style="margin-top: 15px">
+                  <label class="control-label" for="quantity">数&emsp;&emsp;量:<span id="quantity">0</span></label>
+                </div>
+
+              </div>
+
+              <div class="rightFooter">
+                <a class="btn btn-success bottom-margin" href="#" style="margin-top: 4px;" data-toggle="modal" data-target="#memberModal">会员</a>
+                <p style="margin-top: 10px">合计：<span id="consumptionBeforeAmount">0</span></p>
+                <p style="color: #ac2925;">优惠：<span id="discountedPrice">0.0</span></p>
+                <p style="font-size: 24px;color: #ac2925"><span>￥</span><span id="consumptionAmount">0.0</span></p>
+              </div>
+
+            </div>
+            <a class="btn btn-success bottom-margin" href="#" style="margin-top: 15px;" id="empty">清空</a>
+            <a class="btn btn-info bottom-margin" style="float: right;" href="#" data-toggle="modal" onclick="settlement()">立即结算</a>
+          </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row" id="pList">
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="settlement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div style="width: 50%;float: left;color: #ac2925">
+          <div>
+            <a type="button" style="float: left;margin-top: 6px;" for="modalTotal">合计:</a>
+            <input type="text" id="modalTotal" style="float: left;width: 70%;height: 20px;" readonly/>
+          </div>
+          <div style="margin-top: 40px;">
+            <a style="float: left;margin-top: 6px;" for="modalPreferential">优惠:</a>
+            <input type="text" id="modalPreferential" style="float: left;width: 70%;height: 20px;" readonly/>
+          </div>
+          <div style="margin-top: 80px;">
+            <a style="float: left;margin-top: 6px;" for="modalPay">应付:</a>
+            <input type="text" id="modalPay" style="float: left;width: 70%;height: 20px;" readonly/>
+          </div>
+          <div style="margin-top: 120px;">
+            <a style="float: left;margin-top: 6px;" for="modalWipeZero">抹零:</a>
+            <input type="text" id="modalWipeZero" value="0" style="float: left;width: 70%;height: 20px;"/>
+          </div>
+          <div style="margin-top: 160px;">
+            <a style="float: left;margin-top: 6px;" for="ModalPayment">付款:</a>
+            <input type="text" id="ModalPayment" style="float: left;width: 70%;height: 20px;" onchange="payMent()"/>
+          </div>
+          <div style="margin-top: 200px;">
+            <a style="float: left;margin-top: 6px;" for="modalSmallChange">找零:</a>
+            <input type="text" id="modalSmallChange" style="float: left;width: 70%;height: 20px;" readonly/>
+          </div>
+          <div style="margin-top: 240px;">
+            <a style="float: left;margin-top: 6px;" for="modalDiscountedPrice">优惠券:</a>
+            <select id="modalDiscountedPrice" style="float: left;width: 70%;height: 30px;"></select>
+          </div>
+        </div>
+        <div style="width: 50%;float:right">
+          <div class="wrapper">
+            <div class="btn-group" data-toggle="buttons-radio" id="payMeth">
+              <button for="rmb" type="button" style="font-size: 20px;">
+                <i class="fa fa-rmb"></i>现金
+              </button>
+              <button for="wechat" type="button" style="font-size: 20px;">
+                <i class="fa fa-wechat"></i>微信
+              </button>
+              <button for="alipay" type="button" style="font-size: 20px;">
+                <i class="fa fa-rmb"></i>支付宝
+              </button >
+              <button for="card" type="button" style="font-size: 20px;">
+                <i class="fa fa-credit-card"></i>刷卡
+              </button>
+            </div>
+          </div>
+          <div id="payContent" style="margin-top: 50px;">
+            <div class="control-group">
+              <label class="control-label" for="commodityIntroduction">备注</label>
+              <div class="controls">
+                <textarea rows="3" id="commodityIntroduction" class="input-block-level" style="display: inline-block"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="addPurchase" type="button" class="btn btn-primary">确认结算</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <input id="memberPhone" class="span3" type="text" style="height: 25px;" placeholder="请输入电话号码">
+        <a class="btn btn-success bottom-margin" href="#" style="height: 25px;" id="memberSearch">搜索</a>
+      </div>
+      <div class="modal-body" style="height: 400px;">
+        <div class="widget-body">
+          <table class="table table-condensed table-striped table-bordered table-hover no-margin">
+            <thead id="memberList">
+              <tr>
+                <th style="width:13%">会员姓名</th>
+                <th style="width:13%">会员电话</th>
+                <th style="width:15%">会员生日</th>
+                <th style="width:13%">会员积分</th>
+                <th style="width:13%">账户余额</th>
+                <th style="width:13%">会员折扣</th>
+                <th style="width:20%" class="hidden-phone">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="memberRecharge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">会员充值</h4>
+      </div>
+      <div class="modal-body">
+        <div style="display: inline-block;width: 50%;float: right;">
+          <select style="height: 35px;width: 25%;display: inline;">
+            <option value='0'>手机号码</option>
+            <option value='1'>姓名</option>
+            <option value='2'>身份证号</option>
+          </select>
+          <input type="text" style="height: 25px;width: 50%;display: inline;"/>
+          <input type="hidden" id="RmemberId"/>
+          <a class="btn btn-info bottom-margin" href="#" id="addPurchase" style="display: inline-block;height: 25px;font-size: 16px;padding-top: 3px;">搜索</a>
+        </div>
+        <table width="100%" class="tabtop13">
+          <tr>
+            <td colspan="4" width="100%" class="btbg2 font-center">会员信息</td>
+          </tr>
+          <tr>
+            <td width="28%" class="font-center" for="RmemberName">会员名称：<span  id="RmemberName"></span></td>
+            <td width="28%" class="font-center" for="RmemberPhone">联系电话：<span  id="RmemberPhone"></span></td>
+            <td width="28%" class="font-center" for="RmemberDateBirth">出生日期：<span  id="RmemberDateBirth"></span></td>
+            <td width="16%" class="font-center" rowspan="3"><img id="memberPicture" src="" width="129px" height="150px"/></td>
+          </tr>
+          <tr>
+            <td width="28%" class="font-center" for="RdiscountProportion">会员等级：<span  id="RdiscountProportion"></span></td>
+            <td width="28%" class="font-center" for="RmemberIntegral">会员积分：<span  id="RmemberIntegral"></span></td>
+            <td width="28%" class="font-center" for="RgradeName">会员折扣：<span  id="RgradeName"></span></td>
+          </tr>
+          <tr>
+            <td width="28%" class="font-center" for="RrechargeAmount">充值金额：<span  id="RrechargeAmount"></span></td>
+            <td width="28%" class="font-center" for="RhandselBalance">赠送金额：<span  id="RhandselBalance">0</span></td>
+            <td width="28%" class="font-center" for="RaccountBalance">账户余额：<span  id="RaccountBalance"></span></td>
+          </tr>
+        </table>
+        <div style="margin-top: 20px;width: 880px;">
+          <div style="display: inline-block;width: 290px;">
+            <span for="modalTotal">充值金额</span>
+            <input type="number" id="rechargeAmount" min="1" value="0" style="height: 25px;width:65%;"/>
+          </div>
+          <div style="display: inline-block;width: 290px;">
+            <span for="modalTotal">赠送金额</span>
+            <input type="text" id="HhandselBalance" style="height: 25px;width: 65%;" readonly/>
+          </div>
+          <div style="display: inline-block;width: 290px;">
+            <span for="modalTotal">支付方式</span>
+            <select id="paymentMethod" style="height: 35px;width:68%;">
+              <option value='0'>现金</option>
+              <option value='1'>刷卡</option>
+              <option value='2'>微信</option>
+              <option value='3'>支付宝</option>
+            </select>
+          </div>
+        </div>
+        <span for="modalTotal" style="border:1px solid #cccccc;margin-top: 20px;padding-top: 5px;display: block;background:#f3f3f3;height: 30px;width: 100%;">备注</span>
+        <textarea rows="5" style="width: 841px;" id="Rremark"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button id="addRecharge" type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../Public/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../Public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../Public/js/professional/consumption_add.js"></script>
+<script>
+
+</script>
+</body>
+</html>

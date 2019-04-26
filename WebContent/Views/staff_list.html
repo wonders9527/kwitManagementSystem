@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+  <!-->
+
+<html lang="en">
+
+<!--
+<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>员工列表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="../Public/icomoon/style.css" rel="stylesheet">
+  <!--[if lte IE 7]>
+  <script src="../Public/css/icomoon-font/lte-ie7.js"></script>
+  <![endif]-->
+  <link href="../Public/css/main.css" rel="stylesheet">
+  <link href="../Public/css/fonts/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+<header>
+  <a href="#" class="logo">
+    <img src="../Public/img/logo.png" alt="Logo" />
+  </a>
+  <div class="btn-group">
+    <button class="btn btn-primary">Srinu Baswa</button>
+    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu pull-right">
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#">Account Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+  <ul class="mini-nav">
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe040;"></div>
+        <span class="info-label badge badge-warning">3</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe04c;"></div>
+        <span class="info-label badge badge-info">5</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe037;"></div>
+        <span class="info-label badge badge-success">9</span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+<div class="container-fluid">
+  <div class="dashboard-container">
+    <div class="top-nav">
+      <ul>
+        <li>
+          <a href="index.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a0;"></div>门店管理</a>
+        </li>
+        <li>
+          <a href="product.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></div>商品管理</a>
+        </li>
+        <li>
+          <a href="consumption.html"><div class="fs1" aria-hidden="true" data-icon="&#xe096;"></div>消费充值</a>
+        </li>
+        <li>
+          <a href="m_member.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></div>会员管理</a>
+        </li>
+        <li>
+          <a href="stock.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a9;"></div>库存管理</a>
+        </li>
+        <li>
+          <a href="staff_manage.html" class="selected" style="font-size: 16px;"><div class="fs1" aria-hidden="true" data-icon="&#xe14a;"></div>员工管理</a>
+        </li>
+        <li>
+          <a href="media.html"><div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>排班考勤</a>
+        </li>
+        <li>
+          <a href="calendar.html"><div class="fs1" aria-hidden="true" data-icon="&#xe052;"></div>报表管理</a>
+        </li>
+        <li>
+          <a href="typography.html"><div class="fs1" aria-hidden="true" data-icon="&#xe100;"></div>营销管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>配置管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>系统管理</a>
+        </li>
+      </ul>
+      <div class="clearfix">
+      </div>
+    </div>
+    <div class="sub-nav">
+      <ul>
+        <li><a href="staff_manage.html">主页</a></li>
+        <li><a href="staff_post.html">员工岗位</a></li>
+        <li><a href="staff_add.html">新增员工</a></li>
+        <li><a href="staff_list.html" class="heading">员工列表</a></li>
+      </ul>
+    </div>
+
+    <div class="dashboard-wrapper">
+      <div class="left-sidebar">
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="widget">
+              <div class="widget-header">
+                <div class="title">
+                  员工信息列表<a id="dynamicTable"></a>
+                </div>
+                <span class="tools">
+                  <a class="fs1" aria-hidden="true" data-icon="&#xe090;"></a>
+                </span>
+              </div>
+              <div class="widget-body">
+                <div id="dt_example" class="example_alt_pagination">
+                  <table class="table table-condensed table-striped table-hover table-bordered pull-left" id="data-table">
+                    <thead>
+                      <tr>
+                        <th style="width:3%"></th>
+                        <th style="width:10%">所属岗位</th>
+                        <th style="width:8%">员工姓名</th>
+                        <th style="width:4%">性别</th>
+                        <th style="width:10%">联系电话</th>
+                        <th style="width:10%">出生日期</th>
+                        <th style="width:20%">家庭住址</th>
+                        <th style="width:10%">所属部门</th>
+                        <th style="width:5%">是否在职</th>
+                        <th style="width:10%">创建时间</th>
+                        <th style="width:10%">操作</th>
+                      </tr>
+                    </thead>
+                    <tbody id="staffList">
+
+                    </tbody>
+                  </table>
+                  <div class="clearfix">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Info_prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">提示</h4>
+      </div>
+      <div id="promptContent" class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../Public/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../Public/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  var dataJson;
+  $(function(){
+    $.ajax({
+      url: 'dataEmployeeInformation_getEmployeeInformation.action',
+      type: 'post',
+      dataType:'json',
+      data:{'socialCreditCode':sessionStorage.getItem("socialCreditCode")},
+      timeout: 3000,
+      ache: false,
+      error: erryFunction,    //错误执行方法
+      success: succFunction   //成功执行方法
+    });
+    function erryFunction() {
+      console.log("error");
+    }
+    function succFunction(data) {
+      dataJson=data;
+      if(data.length>0){
+        for(var i=0;i<data.length;i++){
+          var gender;
+          var employmentStatus;
+          if(data[i].gender=='1'){
+            gender='男';
+          }else if(data[i].gender=='0'){
+            gender='女';
+          }else{
+            gender='';
+          }
+
+          if(data[i].employmentStatus=='1'){
+            employmentStatus='待岗';
+          }else if(data[i].employmentStatus=='0'){
+            employmentStatus='在职';
+          }else if(data[i].employmentStatus=='2'){
+            employmentStatus='离职';
+          }else{
+            employmentStatus='';
+          }
+
+          $('#staffList').append(
+                  '<tr>'+
+                  '<td><input type="checkbox" class="no-margin" value=\"'+data[i].id+'\"/></td>'+
+                  '<td>'+data[i].post+'</td>'+
+                  '<td>'+data[i].employeeName+'</td>'+
+                  '<td>'+gender+'</td>'+
+                  '<td>'+data[i].contactNumber+'</td>'+
+                  '<td>'+data[i].dateBirth.split('T')[0]+'</td>'+
+                  '<td>'+data[i].homeAddress+'</td>'+
+                  '<td>'+data[i].department+'</td>'+
+                  '<td>'+employmentStatus+'</td>'+
+                  '<td>'+data[i].createDate.split('T')[0]+'</td>'+
+                  '<td>'+
+                  '<a href="staff_edit.html?staffId='+data[i].id+'\" class="btn btn-info btn-mini"><i class="fa fa-pencil-square-o" style="font-size:14px"></i>编辑</a>'+
+                  '<a onclick="deleteEmployee(event)" href="#" class="btn btn-success btn-mini"><i class="fa fa-trash-o" style="font-size:14px"></i>删除</a>'+
+                  '</td>'+
+                  '</tr>'
+          );
+        }
+      }
+      f();
+    }
+  });
+
+</script>
+<script type="text/javascript" src="../Public/js/jquery.scrollUp.js"></script>
+<script type="text/javascript" src="../Public/js/jquery.dataTables.js"></script>
+
+
+<script type="text/javascript">
+  function f(){
+    //ScrollUp
+    $(function () {
+      $.scrollUp({
+        scrollName: 'scrollUp', // Element ID
+        topDistance: '300', // Distance from top before showing element (px)
+        topSpeed: 300, // Speed back to top (ms)
+        animation: 'fade', // Fade, slide, none
+        animationInSpeed: 400, // Animation in speed (ms)
+        animationOutSpeed: 400, // Animation out speed (ms)
+        scrollText: 'Scroll to top', // Text for element
+        activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+      });
+    });
+
+    //Tooltip
+    $('a').tooltip('hide');
+
+    //Data Tables
+    $(document).ready(function () {
+      $('#data-table').dataTable({
+        "sPaginationType": "full_numbers"
+      });
+    });
+
+    jQuery('.delete-row').click(function () {
+      var conf = confirm('Continue delete?');
+      if (conf) jQuery(this).parents('tr').fadeOut(function () {
+        jQuery(this).remove();
+      });
+      return false;
+    });
+  }
+</script>
+<script type="text/javascript" src="../Public/js/professional/staff_list.js"></script>
+</body>
+</html>

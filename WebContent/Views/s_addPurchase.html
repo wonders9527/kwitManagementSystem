@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html lang="en">
+
+<!--
+<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>新增采购</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link href="../Public/icomoon/style.css" rel="stylesheet">
+  <!--[if lte IE 7]>
+  <script src="css/icomoon-font/lte-ie7.js"></script>
+  <![endif]-->
+
+  <link href="../Public/css/main.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="#" class="logo">
+    <img src="../Public/img/logo.png" alt="logo" />
+  </a>
+  <div class="btn-group">
+    <button class="btn btn-primary">Srinu Baswa</button>
+    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu pull-right">
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#">Account Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+  <ul class="mini-nav">
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe040;"></div>
+        <span class="info-label badge badge-warning">3</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe04c;"></div>
+        <span class="info-label badge badge-info">5</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="fs1" aria-hidden="true" data-icon="&#xe037;"></div>
+        <span class="info-label badge badge-success">9</span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+<div class="container-fluid">
+  <div class="dashboard-container">
+    <div class="top-nav">
+      <ul>
+        <li>
+          <a href="index.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0a0;"></div>门店管理</a>
+        </li>
+        <li>
+          <a href="product.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></div>商品管理</a>
+        </li>
+        <li>
+          <a href="consumption.html"><div class="fs1" aria-hidden="true" data-icon="&#xe096;"></div>消费充值</a>
+        </li>
+        <li>
+          <a href="m_member.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></div>会员管理</a>
+        </li>
+        <li>
+          <a href="stock.html" class="selected" style="font-size: 16px;"><div class="fs1" aria-hidden="true" data-icon="&#xe0a9;"></div>库存管理</a>
+        </li>
+        <li>
+          <a href="staff_manage.html"><div class="fs1" aria-hidden="true" data-icon="&#xe14a;"></div>员工管理</a>
+        </li>
+        <li>
+          <a href="media.html"><div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>排班考勤</a>
+        </li>
+        <li>
+          <a href="calendar.html"><div class="fs1" aria-hidden="true" data-icon="&#xe052;"></div>报表管理</a>
+        </li>
+        <li>
+          <a href="typography.html"><div class="fs1" aria-hidden="true" data-icon="&#xe100;"></div>营销管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>配置管理</a>
+        </li>
+        <li>
+          <a href="edit-profile.html"><div class="fs1" aria-hidden="true" data-icon="&#xe0aa;"></div>系统管理</a>
+        </li>
+      </ul>
+      <div class="clearfix">
+      </div>
+    </div>
+    <div class="sub-nav">
+      <ul>
+        <li><a href="stock.html">主页</a></li>
+        <li><a href="s_stockManage.html">库存管理</a></li>
+        <li><a href="s_purchaseManage.html" class="heading">采购管理</a></li>
+        <li><a href="s_returnManage.html">退货管理</a></li>
+        <li><a href="s_supplierManage.html">供应商管理</a></li>
+      </ul>
+    </div>
+
+    <div class="dashboard-wrapper">
+      <div class="left-sidebar">
+        <div class="row-fluid">
+          <div class="span6">
+            <div data-spy="scroll" data-offset="0" class="leftContent">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th style="display:none;">id</th>
+                  <th>商品名称</th>
+                  <th>规格</th>
+                  <th>单价</th>
+                  <th>数量</th>
+                  <th>总金额</th>
+                  <th>实收金额</th>
+                  <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="purchaesList">
+
+                </tbody>
+              </table>
+            </div>
+            <div class="footer">
+              <div class="leftFooter">
+                <div class="controls">
+                  <label class="control-label" for="commodityClassification">供应商&emsp;</label>
+                  <select id="commodityClassification" class="span3"></select>
+                  <label class="control-label" style="margin-left:17px" for="otherFee">采购日期</label>
+                  <input type="date" id="purchaseTime" class="span4"/>
+                </div>
+                <div class="controls">
+                  <label class="control-label" for="paymentMethod">支付方式</label>
+                  <select id="paymentMethod" class="span3">
+                    <option value='0'>现金</option>
+                    <option value='1'>刷卡</option>
+                    <option value='2'>微信</option>
+                    <option value='3'>支付宝</option>
+                  </select>
+                  <label class="control-label" style="margin-left:17px" for="otherFee">其他费用</label>
+                  <input type="text" id="otherFee" class="span4"/>
+                </div>
+                <div class="controls">
+                  <label class="control-label" for="remark">备   注</label>
+                  <textarea rows="3" id="remark" style="margin-left:10px" class="span10 input-block-level"></textarea>
+                </div>
+              </div>
+              <div class="rightFooter">
+                <p>数量：<span id="quantity">0</span></p>
+                <p>合计：<span id="total">0.0</span></p>
+                <p style="font-size: 24px;color: #ac2925">实收：<span>￥</span><span id="actualHarvest">0.0</span></p>
+                <a class="btn btn-info bottom-margin" href="#" id="addPurchase">确认采购</a>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+            <div data-spy="scroll" data-offset="0" class="rightContent">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>商品分类</th>
+                    <th>商品名称</th>
+                    <th>商品规格</th>
+                    <th>商品价格</th>
+                  </tr>
+                </thead>
+                <tbody id="productPur">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="text/javascript" src="../Public/js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../Public/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../Public/js/professional/s_addPurchase.js"></script>
+
+</body>
+</html>

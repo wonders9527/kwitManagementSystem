@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.kwit.model.DataProductInformation" table="data_product_information" catalog="kwitmanagementsystem">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="socialCreditCode" type="java.lang.String">
+            <column name="social_credit_code" length="18" not-null="true">
+                <comment>统一社会信息代码</comment>
+            </column>
+        </property>
+        <property name="storeName" type="java.lang.String">
+            <column name="store_name" length="50">
+                <comment>门店名称</comment>
+            </column>
+        </property>
+        <property name="commodityClassification" type="java.lang.String">
+            <column name="commodity_classification" length="10">
+                <comment>商品分类</comment>
+            </column>
+        </property>
+        <property name="commodityName" type="java.lang.String">
+            <column name="commodity_name" length="50" not-null="true">
+                <comment>商品名称</comment>
+            </column>
+        </property>
+        <property name="commodityCode" type="java.lang.String">
+            <column name="commodity_code" length="20">
+                <comment>商品简码</comment>
+            </column>
+        </property>
+        <property name="commoditySpecification" type="java.lang.String">
+            <column name="commodity_specification" length="5">
+                <comment>商品规格</comment>
+            </column>
+        </property>
+        <property name="specificationName" type="java.lang.String">
+            <column name="specification_name" length="200">
+                <comment>规格名称</comment>
+            </column>
+        </property>
+        <property name="specificationContent" type="java.lang.String">
+            <column name="specification_content" length="200">
+                <comment>规格内容</comment>
+            </column>
+        </property>
+        <property name="commodityPrice" type="java.lang.String">
+            <column name="commodity_price" length="30" not-null="true">
+                <comment>商品价格</comment>
+            </column>
+        </property>
+        <property name="commodityLabel" type="java.lang.String">
+            <column name="commodity_label" length="50">
+                <comment>商品标签</comment>
+            </column>
+        </property>
+        <property name="commodityBarCode" type="java.lang.String">
+            <column name="commodity_barCode" length="50">
+                <comment>商品条码</comment>
+            </column>
+        </property>
+        <property name="commodityPicture" type="java.lang.String">
+            <column name="commodity_picture" length="500">
+                <comment>商品图片</comment>
+            </column>
+        </property>
+        <property name="commodityIntroduction" type="java.lang.String">
+            <column name="commodity_Introduction" length="200">
+                <comment>商品简介</comment>
+            </column>
+        </property>
+        <property name="commodityDescription" type="java.lang.String">
+            <column name="commodity_description" length="200">
+                <comment>商品说明</comment>
+            </column>
+        </property>
+        <property name="commodityShelfStatus" type="java.lang.String">
+            <column name="commodity_shelf_status" length="2">
+                <comment>商品上架状态</comment>
+            </column>
+        </property>
+        <property name="mallDisplayStatus" type="java.lang.String">
+            <column name="mall_display_status" length="2">
+                <comment>商城展示状态</comment>
+            </column>
+        </property>
+        <property name="participationDiscountStatus" type="java.lang.String">
+            <column name="participation_discount_status" length="2">
+                <comment>参与折扣状态</comment>
+            </column>
+        </property>
+        <property name="employeeCommissionStatus" type="java.lang.String">
+            <column name="employee_commission_status" length="2">
+                <comment>员工提成状态</comment>
+            </column>
+        </property>
+        <property name="commissionAmount" type="java.lang.String">
+            <column name="commission_amount" length="50">
+                <comment>提成金额</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="100">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="Create_date" length="19">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="temp1" type="java.lang.String">
+            <column name="Temp1" length="100">
+                <comment>预留一</comment>
+            </column>
+        </property>
+        <property name="temp2" type="java.lang.String">
+            <column name="Temp2" length="100">
+                <comment>预留二</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
